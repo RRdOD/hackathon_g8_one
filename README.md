@@ -2,13 +2,13 @@
 
 ## 📋 Sumário Executivo
 
-Este documento descreve o **arquivo principal do modelo** (`modelo_churn_final_calibrado.joblib`) e todos os **arquivos de suporte** necessários para que a **API REST (Java/Spring Boot)** consiga carregar o modelo e fazer previsões de churn em tempo real.
+Este documento descreve o **arquivo principal do modelo** (`modelo_churn.joblib`) e todos os **arquivos de suporte** necessários para que a **API REST (Java/Spring Boot)** consiga carregar o modelo e fazer previsões de churn em tempo real.
 
 ---
 
 ## 🎯 O que é o arquivo `.joblib`?
 
-O arquivo **`modelo_churn_final_calibrado.joblib`** é um arquivo **serializado em formato binário** que contém:
+O arquivo **`modelo_churn.joblib`** é um arquivo **serializado em formato binário** que contém:
 
 - ✅ Modelo de classificação treinado (Random Forest com calibração de probabilidade)
 - ✅ Pesos e parâmetros aprendidos durante o treinamento
@@ -22,14 +22,14 @@ O arquivo **`modelo_churn_final_calibrado.joblib`** é um arquivo **serializado 
 
 ### **1. Modelo Serializado**
 
-#### `modelo_churn_final_calibrado.joblib`
+#### `modelo_churn.joblib`
 - **O quê:** Modelo Random Forest com calibração de probabilidade
 - **Tamanho:** 29 MB
 - **Função:** Realizar predições de churn
 - **Carregamento em Python:**
   ```python
   import joblib
-  modelo = joblib.load('modelo_churn_final_calibrado.joblib')
+  modelo = joblib.load('modelo_churn.joblib')
   ```
 - **Uso na API:** Receber dados do cliente e retornar previsão + probabilidade
 
@@ -154,7 +154,7 @@ import pandas as pd
 import json
 
 # Carregar modelo
-modelo = joblib.load('modelo_churn_final_calibrado.joblib')
+modelo = joblib.load('modelo_churn.joblib')
 
 # Carregar seletor RFE
 rfe = joblib.load('rfe_selector.joblib')
@@ -244,7 +244,7 @@ curl -X POST http://localhost:8080/predict \
 
 ## ✅ Checklist de Integração na API
 
-- [ ] Arquivo `modelo_churn_final_calibrado.joblib` carregado na inicialização
+- [ ] Arquivo `modelo_churn.joblib` carregado na inicialização
 - [ ] Arquivo `rfe_selector.joblib` disponível e aplicado antes da predição
 - [ ] Arquivo `threshold_otimo.txt` lido corretamente
 - [ ] Arquivo `label_encoders_info.txt` usado para transformar variáveis categóricas
@@ -289,7 +289,7 @@ print(f"Threshold otimizado: {threshold}")
 ```
 projeto-churn/
 ├── models/
-│   ├── modelo_churn_final_calibrado.joblib
+│   ├── modelo_churn.joblib
 │   ├── rfe_selector.joblib
 │   ├── threshold_otimo.txt
 │   ├── label_encoders_info.txt
@@ -312,7 +312,7 @@ projeto-churn/
 ## 🎓 Resumo: O que Anexar no Hackathon
 
 ### **Obrigatório para Funcionamento:**
-1. ✅ `modelo_churn_final_calibrado.joblib`
+1. ✅ `modelo_churn.joblib`
 2. ✅ `rfe_selector.joblib`
 3. ✅ `threshold_otimo.txt`
 4. ✅ `label_encoders_info.txt`
@@ -354,5 +354,5 @@ R: Use o `X_test.csv` com `y_test.csv` para validar que as previsões estão cor
 
 ---
 
-**Última atualização:** 9 de Janeiro de 2026.
+**Última atualização:** 10 de Janeiro de 2026.
 **Status:** Pronto para produção ✅
