@@ -284,10 +284,10 @@ print(f"Threshold otimizado: {threshold}")
 
 ---
 
-## 🔗 Estrutura de Arquivos Recomendada
+## 🔗 Estrutura dos Arquivos
 
 ```
-projeto-churn/
+hackathon_g8_one/
 ├── models/
 │   ├── modelo_churn.joblib
 │   ├── rfe_selector.joblib
@@ -300,10 +300,8 @@ projeto-churn/
 │   ├── X_test.csv
 │   ├── y_test.csv
 │   └── melhores_hiperparametros.csv
-├── api/
-│   ├── app.py (ou main Java)
-│   ├── requirements.txt
-│   └── test_predict.py
+├── dados_streaming.csv
+├── Diário_de_Bordo_Rafael_Dias.ipynb
 └── README.md
 ```
 
