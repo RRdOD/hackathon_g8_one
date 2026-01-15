@@ -352,5 +352,5 @@ R: Use o `X_test.csv` com `y_test.csv` para validar que as previsões estão cor
 
 ---
 
-**Última atualização:** 10 de Janeiro de 2026.
+**Última atualização:** 14 de Janeiro de 2026.
 **Status:** Pronto para produção ✅
