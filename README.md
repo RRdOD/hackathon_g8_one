@@ -284,10 +284,10 @@ print(f"Threshold otimizado: {threshold}")
 
 ---
 
-## 🔗 Estrutura de Arquivos Recomendada
+## 🔗 Estrutura dos Arquivos
 
 ```
-projeto-churn/
+hackathon_g8_one/
 ├── models/
 │   ├── modelo_churn.joblib
 │   ├── rfe_selector.joblib
@@ -300,10 +300,8 @@ projeto-churn/
 │   ├── X_test.csv
 │   ├── y_test.csv
 │   └── melhores_hiperparametros.csv
-├── api/
-│   ├── app.py (ou main Java)
-│   ├── requirements.txt
-│   └── test_predict.py
+├── dados_streaming.csv
+├── Diário_de_Bordo_Rafael_Dias.ipynb
 └── README.md
 ```
 
@@ -354,5 +352,5 @@ R: Use o `X_test.csv` com `y_test.csv` para validar que as previsões estão cor
 
 ---
 
-**Última atualização:** 10 de Janeiro de 2026.
+**Última atualização:** 14 de Janeiro de 2026.
 **Status:** Pronto para produção ✅
