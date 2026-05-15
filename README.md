@@ -18,11 +18,14 @@
 
 Apenas 3,6% dos clientes que cancelam não são detectados (54 falsos negativos em 6.000 testes).
 
+## Matriz de confusão
+![Matriz de Confusão](matriz_confusao_completa.png)
+
 ### 🔍 O que leva um cliente a cancelar?
 
 A análise de importância de features e os padrões MNAR revelaram os principais fatores:
 
-- **Baixo engajamento** (tempo de sessão 57% abaixo da média de quem fica)
+- **Baixo engajamento** (tempo de sessão 52% abaixo da média de quem fica)
 - **Muitos dias sem acessar** (clientes com +34 dias de inatividade têm 52% de chance de churn)
 - **Não avaliar conteúdo** (clientes que não deixam avaliação cancelam 2,2× mais)
 - **Contrato mensal** vs. anual (maior flexibilidade para sair)
