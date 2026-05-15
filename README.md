@@ -63,10 +63,11 @@ A análise de importância de features e os padrões MNAR revelaram os principai
 2. Abra o notebook Diário_de_Bordo_Rafael_Dias.ipynb e execute todas as células.
 
 3. Para fazer previsões com o modelo já treinado:
+```
 import joblib
 modelo = joblib.load('modelo_churn.joblib')
 # X_novo deve ser um DataFrame com as mesmas 25 features
 probabilidade = modelo.predict_proba(X_novo)[:, 1]
-
+```
 Autor: Rafael Dias
-Contato: [ [e-mail](cientistarafael@gmail.com) / [LinkedIn](https://www.linkedin.com/in/rafael-dias-datascience/)]
+Contato: [[LinkedIn](https://www.linkedin.com/in/rafael-dias-datascience/)]
