@@ -89,5 +89,5 @@ modelo = joblib.load('modelo_churn.joblib')
 # X_novo deve ser um DataFrame com as mesmas 25 features
 probabilidade = modelo.predict_proba(X_novo)[:, 1]
 ```
-Autor: Rafael Dias
-Contato: [LinkedIn](https://www.linkedin.com/in/rafael-dias-datascience/)
+### Autor: Rafael Dias
+### Contato: [LinkedIn](https://www.linkedin.com/in/rafael-dias-datascience/)
