@@ -18,8 +18,28 @@
 
 Apenas 3,6% dos clientes que cancelam não são detectados (54 falsos negativos em 6.000 testes).
 
-## Matriz de confusão
+### Matriz de confusão
 ![Matriz de Confusão](matriz_confusao_completa.png)
+
+## 📊 Matriz de Confusão – Avaliação no Conjunto de Teste (6.000 clientes)
+
+|                       | Previu que ficaria | Previu que cancelaria |
+|-----------------------|--------------------|------------------------|
+| **Real: ficou**       | 4.386 (73,1%)      | 120 (2,0%)             |
+| **Real: cancelou**    | 54 (0,9%)          | **1.440 (24,0%)**      |
+
+**Interpretação prática:**
+
+- **1.440 clientes** foram corretamente identificados como risco de cancelamento (*verdadeiros positivos*).  
+  A empresa pode agir proativamente nesse grupo para tentar reter a receita.
+- **4.386 clientes** foram classificados como “vão ficar” e realmente permaneceram (*verdadeiros negativos*).  
+  Nenhum esforço de retenção desnecessário será gasto com eles.
+- **120 clientes** receberiam uma oferta de retenção mesmo sem intenção real de sair (*falsos positivos*).  
+  Um custo baixo (2% da base) para a segurança que o modelo proporciona.
+- **Apenas 54 clientes** cancelariam sem que o modelo gerasse um alerta (*falsos negativos*).  
+  Essa é a taxa de “escape” — 0,9% do total, um valor muito baixo e aceitável para a operação.
+
+**Em resumo:** o modelo acerta **97,1% das previsões** e, mais importante, deixa escapar apenas **3,6% dos clientes que realmente cancelam** (recall de 96,4%). Isso significa que a equipe de retenção consegue focar seus esforços em quase todos os casos de risco iminente, com pouquíssimo desperdício de recursos.
 
 ### 🔍 O que leva um cliente a cancelar?
 
