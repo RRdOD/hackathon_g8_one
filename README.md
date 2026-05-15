@@ -70,4 +70,4 @@ modelo = joblib.load('modelo_churn.joblib')
 probabilidade = modelo.predict_proba(X_novo)[:, 1]
 ```
 Autor: Rafael Dias
-Contato: [[LinkedIn](https://www.linkedin.com/in/rafael-dias-datascience/)]
+Contato: [LinkedIn](https://www.linkedin.com/in/rafael-dias-datascience/)
