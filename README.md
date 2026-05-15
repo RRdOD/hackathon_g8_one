@@ -18,11 +18,8 @@
 
 Apenas 3,6% dos clientes que cancelam não são detectados (54 falsos negativos em 6.000 testes).
 
-### Matriz de confusão
-![Matriz de Confusão](matriz_confusao_completa.png)
-
 ## 📊 Matriz de Confusão – Avaliação no Conjunto de Teste (6.000 clientes)
-
+![Matriz de Confusão](matriz_confusao_completa.png)
 |                       | Previu que ficaria | Previu que cancelaria |
 |-----------------------|--------------------|------------------------|
 | **Real: ficou**       | 4.386 (73,1%)      | 120 (2,0%)             |
